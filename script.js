@@ -18,10 +18,9 @@ async function Weather(cityName) {
 
     console.log(data);
     document.querySelector('.city').innerHTML = data.name;
-    document.querySelector('.temp').innerHTML = 'Temp-' + Math.round(data.main.temp) + '°C';
-    document.querySelector('.humidity').innerHTML = data.main.humidity + '%'
-    document.querySelector('.wind').innerHTML = data.wind.deg;
-    document.querySelector('.wind').innerHTML = data.wind.speed + 'km/h';
+    document.querySelector('.temp').innerHTML = 'Temp -' + Math.round(data.main.temp) + '°C';
+    document.querySelector('.humidity').innerHTML = 'Humidity -'+ data.main.humidity + '%'
+    document.querySelector('.wind').innerHTML = 'Wind speed -'+data.wind.speed + 'km/h';
     data.weather.forEach(item => {
         icon.setAttribute("src", "http://openweathermap.org/img/w/" + item.icon + ".png");
         icon.style.display = "block";
